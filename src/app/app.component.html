@@ -1,0 +1,62 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div class="container">
+  <h2>Crear Cliente</h2>
+  <form>
+    <div class="row g-3 align-items-center">
+     <div class="col-auto">
+       <label for="nombre" class="col-form-label">Nombre:</label>
+     </div>
+     <div class="col-auto">
+       <input type="text"  id="nombre" [(ngModel)]="nombre"  name="nombre" class="form-control" >
+     </div>
+   
+   </div>
+   <br>
+   <div class="row g-3 align-items-center">
+     <div class="col-auto">
+       <label for="cif" class="col-form-label">CIF:</label>
+     </div>
+     <div class="col-auto">
+       <input type="text" id="cif"  [(ngModel)]="cif"  name="cif" class="form-control" >
+     </div>
+   
+   </div>
+   <br>
+   <div class="row g-3 align-items-center">
+     <div class="col-auto">
+       <label for="direccion" class="col-form-label">Dirección</label>
+     </div>
+     <div class="col-auto">
+       <input type="text" id="direccion" [(ngModel)]="direccion" name="direccion" class="form-control" >
+     </div>
+   </div>
+   <br>
+   <div class="row g-3 align-items-center">
+     <div class="col-auto">
+       <label for="grupo" class="form-label">Grupo</label>
+     </div>
+     <div class="col-auto">
+       <select id="grupo" [(ngModel)]="grupo"  name="grupo" class="form-select" aria-label="Sin definir">
+         <option selected>Sin definir</option>
+         <option value="Trabajador">Trabajador</option>
+         <option value="Estudiante">Estudiante</option>
+         <option value="Nini">Nini</option>
+       </select>  </div>
+   </div>
+   <br>
+     <button (click)="save()" class="btn btn-primary">Submit</button>
+   </form>
+</div>
+
+
+<router-outlet ></router-outlet>
+<br><br>
+<app-lista  [cliente]="arrayCliente" ></app-lista>
